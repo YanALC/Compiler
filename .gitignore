@@ -1,7 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
 # Compiled class file
-*.class
 
 # Log file
 *.log
@@ -44,7 +43,6 @@ gradle-app.setting
 
 # User-specific stuff
 .idea/**/tasks.xml
-.idea/**/dictionaries
 .idea/**/shelf
 
 # Sensitive or high-churn files
@@ -93,3 +91,9 @@ desktop.ini
 /classes
 /.idea
 /src/main/groovy/META-INF
+gradlew
+gradlew.bat
+src/main/java/
+src/main/resources/
+src/test/java/
+src/test/resources/

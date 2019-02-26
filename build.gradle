@@ -28,6 +28,6 @@ dependencies {
 
 jar {
 	manifest {
-		attributes('Main-Class': "D:\\Google Drive (yanalc2017@gmail.com)\\Faculdade\\Disciplinas\\Cursando\\Compiladores\\Trabalhos\\Lexer\\out\\production\\classes\\Lexer.class")
+		attributes('Main-Class': 'Lexer')
 	}
 }
