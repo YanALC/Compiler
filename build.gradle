@@ -1,0 +1,33 @@
+plugins {
+	id 'groovy'
+	id 'java'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+configurations {
+	jaxb
+	jaxbRuntime
+}
+
+dependencies {
+	compile 'org.codehaus.groovy:groovy-all:2.5.6'
+	testImplementation group: 'junit', name: 'junit', version: '4.12'
+	testImplementation "org.spockframework:spock-core:1.3-RC1-groovy-2.5"
+	jaxb 'javax.xml.bind:jaxb-api:2.3.0'
+	jaxbRuntime 'com.sun.xml.bind:jaxb-core:2.3.0.1'
+	jaxbRuntime 'com.sun.xml.bind:jaxb-impl:2.3.0.1'
+	jaxbRuntime 'javax.activation:activation:1.1.1'
+}
+
+jar {
+	manifest {
+		attributes('Main-Class': "D:\\Google Drive (yanalc2017@gmail.com)\\Faculdade\\Disciplinas\\Cursando\\Compiladores\\Trabalhos\\Lexer\\out\\production\\classes\\Lexer.class")
+	}
+}

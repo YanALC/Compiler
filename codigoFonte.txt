@@ -1,0 +1,6 @@
+x=3;
+variavel="ok";
+if(x>2)
+	x=1.1;
+else
+	variavel="deu ruim";
