@@ -88,12 +88,12 @@ fabric.properties
 .idea/httpRequests
 
 desktop.ini
+*.iml
 /classes
 /.idea
 /src/main/groovy/META-INF
-gradlew
-gradlew.bat
 src/main/java/
 src/main/resources/
 src/test/java/
 src/test/resources/
+/gradlew

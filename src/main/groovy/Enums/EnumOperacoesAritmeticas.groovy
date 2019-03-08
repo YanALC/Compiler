@@ -19,6 +19,6 @@ enum EnumOperacoesAritmeticas {
 	}
 	
 	static EnumOperacoesAritmeticas obterOperacaoAritmetica(String op) {
-		values().find { op == it.op }
+		return values().find { op == it.op }
 	}
 }

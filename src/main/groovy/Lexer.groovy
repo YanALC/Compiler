@@ -15,7 +15,7 @@ class Lexer {
 				throw new FileNotFoundException()
 			}
 			String codigoFonte = arquivo.text
-			analisar(codigoFonte)
+			analiseLexica(codigoFonte)
 			println("Tokens: " + tokens)
 			println("Variáveis: " + variaveis)
 		} catch (Exception ex) {
@@ -23,7 +23,7 @@ class Lexer {
 		}
 	}
 	
-	static void analisar(String codigoFonte) {
+	static void analiseLexica(String codigoFonte) {
 		try {
 			EnumTiposToken.values().each { EnumTiposToken enumTiposToken ->
 				tokens.addAll(codigoFonte.findAll(enumTiposToken.regex).toSet().findResults { String valor ->

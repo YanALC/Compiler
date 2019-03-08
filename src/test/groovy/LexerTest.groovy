@@ -14,7 +14,7 @@ else
 	variavel=5;"""
 		
 		when:
-		Lexer.analisar(texto)
+		Lexer.analiseLexica(texto)
 		
 		then:
 		assert Lexer.tokens, [
@@ -48,7 +48,7 @@ else
 	variavel=5;"""
 		
 		when:
-		Lexer.analisar(texto)
+		Lexer.analiseLexica(texto)
 		
 		then:
 		SyntaxException ex = thrown()
