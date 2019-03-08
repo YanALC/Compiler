@@ -1,3 +1,5 @@
+package Modulos
+
 import Enums.EnumTiposToken
 import jdk.nashorn.internal.runtime.regexp.joni.exception.SyntaxException
 

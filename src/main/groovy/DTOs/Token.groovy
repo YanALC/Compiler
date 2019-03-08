@@ -1,3 +1,5 @@
+package DTOs
+
 import Enums.EnumTiposToken
 
 class Token {

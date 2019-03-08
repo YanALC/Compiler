@@ -1,4 +1,7 @@
+import DTOs.Token
+import DTOs.Variavel
 import Enums.EnumTiposToken
+import Modulos.Lexer
 import jdk.nashorn.internal.runtime.regexp.joni.exception.SyntaxException
 import spock.lang.Specification
 

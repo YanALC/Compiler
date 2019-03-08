@@ -1,3 +1,5 @@
+package DTOs
+
 class Variavel {
 	String id
 	String valor = '0'
