@@ -6,8 +6,9 @@ import jdk.nashorn.internal.runtime.regexp.joni.exception.SyntaxException
 import spock.lang.Specification
 
 class LexerTest extends Specification {
+	static Lexer lexer
 	
-	void "analisar reconhece tudo"() {
+	def "analisar reconhece tudo"() {
 		setup:
 		String texto = """x=3;
 variavel=2;
@@ -17,10 +18,10 @@ else
 	variavel=5;"""
 		
 		when:
-		Lexer.analiseLexica(texto)
+		lexer.analiseLexica(texto)
 		
 		then:
-		assert Lexer.tokens, [
+		assert lexer.tokens, [
 				new Token(EnumTiposToken.IF, "if"),
 				new Token(EnumTiposToken.ELSE, "else"),
 				new Token(EnumTiposToken.ATRIB, "="),
@@ -35,13 +36,13 @@ else
 				new Token(EnumTiposToken.ID, "variavel")
 		]
 		
-		assert Lexer.variaveis, [
+		assert lexer.variaveis, [
 				new Variavel("x"),
 				new Variavel("variavel")
 		]
 	}
 	
-	void "analisar não reconhece strings literais"() {
+	def "analisar não reconhece strings literais"() {
 		setup:
 		String texto = """x=3;
 variavel="ok";
@@ -51,7 +52,7 @@ else
 	variavel=5;"""
 		
 		when:
-		Lexer.analiseLexica(texto)
+		lexer.analiseLexica(texto)
 		
 		then:
 		SyntaxException ex = thrown()

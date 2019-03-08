@@ -1,31 +1,16 @@
 package Modulos
 
+import DTOs.Token
+import DTOs.Variavel
 import Enums.EnumTiposToken
 import jdk.nashorn.internal.runtime.regexp.joni.exception.SyntaxException
 
 class Lexer {
 	
-	static Set<Token> tokens = []
-	static Set<Variavel> variaveis = []
+	Set<Token> tokens = []
+	Set<Variavel> variaveis = []
 	
-	static void main(String[] args) {
-		try {
-			print("Caminho do arquivo: ")
-			String caminhoArquivo = System.in.newReader().readLine()
-			File arquivo = new File(caminhoArquivo)
-			if (!arquivo.exists()) {
-				throw new FileNotFoundException()
-			}
-			String codigoFonte = arquivo.text
-			analiseLexica(codigoFonte)
-			println("Tokens: " + tokens)
-			println("Variáveis: " + variaveis)
-		} catch (Exception ex) {
-			System.out.println(ex)
-		}
-	}
-	
-	static void analiseLexica(String codigoFonte) {
+	void analiseLexica(String codigoFonte) {
 		try {
 			EnumTiposToken.values().each { EnumTiposToken enumTiposToken ->
 				tokens.addAll(codigoFonte.findAll(enumTiposToken.regex).toSet().findResults { String valor ->
